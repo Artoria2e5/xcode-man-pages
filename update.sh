@@ -11,6 +11,7 @@ xcode_path="$1"
 output_dir="$PWD/docs"
 rm -rf "$output_dir"
 
+cp -a assets/* "$output_dir"
 ./export.sh "$xcode_path" "$output_dir"
 version="$(./get-xcode-version.sh "$xcode_path")"
 
